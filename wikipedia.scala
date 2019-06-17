@@ -18,9 +18,9 @@ val langs = List(
 
 
 /** Problem 0:
-*  Returns the number of articles on which the language `lang` occurs.
-*  Hint: consider using method `mentionsLanguage` on `WikipediaArticle`
-*/
+ *  Returns the number of articles on which the language `lang` occurs.
+ *  Hint: consider using method `mentionsLanguage` on `WikipediaArticle`
+ */
 def occurrencesOfLang(lang: String, rdd: RDD[WikipediaArticle]): Int = ??
 
 
