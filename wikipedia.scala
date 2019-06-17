@@ -17,7 +17,7 @@ val langs = List(
 "Objective-C", "Perl", "Scala", "Haskell", "MATLAB", "Clojure", "Groovy")
 
 
-/** Problem 0:
+/* Problem 0:
  *  Returns the number of articles on which the language `lang` occurs.
  *  Hint: consider using method `mentionsLanguage` on `WikipediaArticle`
  */
