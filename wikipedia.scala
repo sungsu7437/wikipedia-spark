@@ -51,23 +51,18 @@ def rankLangsUsingIndex(index: RDD[(String, Iterable[WikipediaArticle])]): List[
  */
 def rankLangsReduceByKey(langs: List[String], rdd: RDD[WikipediaArticle]): List[(String, Int)] = ??
 
-
+//Read dataset from HDFS
 val wikiRdd = sc.textFile("hdfs:///dataset/wikipedia.dat").map(parse)
 
+//Check rankLangs function
 val langsRanked: List[(String, Int)] = rankLangs(langs, wikiRdd)
-
 langsRanked.map(println)
 
-
+//Check makeIndex, rankLangsUsingIndex functions
 def index: RDD[(String, Iterable[WikipediaArticle])] = makeIndex(langs, wikiRdd)
-
 val langsRanked2: List[(String, Int)] = rankLangsUsingIndex(index)
-
 langsRanked2.map(println)
 
-
+//Check rankLangsReduceByKey function
 val langsRanked3: List[(String, Int)] = rankLangsReduceByKey(langs, wikiRdd)
-
 langsRanked3.map(println)
-
-
